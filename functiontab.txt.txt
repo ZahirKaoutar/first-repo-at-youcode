@@ -1,0 +1,350 @@
+Exercices Pratiques  :
+
+Hello Tableau : Déclarez et initialisez un tableau de 5 prénoms. Affichez le troisième prénom.
+Somme Simple : Créez un tableau de 3 nombres, calculez et affichez leur somme avec une boucle for.
+---------------------------------------------------------------------------------------------------
+int main() {
+    // Write C code here
+  char tab[5][8]={"kaoutar","sihame","ilyasse","hamza"};
+  printf("troisieme prenom est %s",tab[2]);
+
+    return 0;
+}char prenoms[5][8] :
+
+5 prénoms,
+
+chaque prénom peut contenir jusqu'à 7 caractères +/0
+
+somme simple:
+
+int main() {
+    // Write C code here
+  int tab[3]={10,20,11};
+  int s=0;
+  for(int i=0;i<=2;i++){
+      printf("%d ",tab[i]);
+      s=s+tab[i];
+      
+  }
+  printf("la somme %d",s);
+
+
+
+
+
+
+
+
+Recherche : Comment savoir si une valeur spécifique se trouve dans un tableau ?
+Le Vérificateur : Demandez un nombre à l'utilisateur. Dites-lui s'il est présent dans un tableau prédéfini de 10 nombres.
+
+À l'Envers ! Affichez les éléments d'un tableau dans l'ordre inverse.
+
+-----------------------------------------------------------------------
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int tab[3] = {10, 20, 11};
+    int val;
+    int T = 0;  
+
+    printf("Entrer la valeur que tu recherches : ");
+    scanf("%d", &val);
+
+    for (int i = 0; i < 3; i++) {
+        if (tab[i] == val) {
+            T = 1;
+            break;  
+        }
+    }
+
+    if (T) {
+        printf("Oui trouvé\n");
+    } else {
+        printf("Non trouvé\n");
+    }
+
+    return 0;
+}
+table inverse
+
+
+#include <stdio.h>
+
+int main() {
+    int t[3] = {1, 2, 3};
+    int T[3];
+
+    for (int i = 0; i < 3; i++) {
+        T[i] = t[2 - i];
+         printf("%d ", T[i]);
+    }
+
+    
+
+    return 0;
+}
+deusieme methode:
+int main() {
+    int t[3] = {1, 2, 3};
+    
+
+    for (int i = 2; i >=0; i--) {
+        
+         printf("%d ", t[i]);
+    }
+
+
+
+
+
+
+
+
+Exercices Pratiques :
+
+Fonction Bonjour : Écrivez une fonction direBonjour qui affiche "Bonjour !" et appelez-la depuis main.
+
+Fonction Calcul : Écrivez une fonction max qui prend deux nombres et retourne le plus grand.
+--------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+   void direBonjour(){
+       printf("Bonjour");
+   } 
+    
+    
+direBonjour();
+    
+
+    return 0;
+}
+
+
+
+
+MAX #include <stdio.h>
+int max(int a,int b){
+       int Max;
+       if(a>b){
+           Max=a;
+       }
+       else{
+           Max=b;
+       }
+       return Max;
+       
+   } 
+int main() {
+   
+   int n1,n2;
+   printf("enter les valeurs de deux nombres:   ");
+   scanf("%d %d  ",&n1,&n2);
+   int res=max(n1,n2);
+   printf("le max est: %d",res);
+    
+    
+
+    
+
+    return 0;
+}
+
+
+
+
+L'Assistant : Écrivez une fonction afficherTableau qui affiche tous les éléments d'un tableau d'entiers qu'elle reçoit.
+Le Comptable : Écrivez une fonction calculerMoyenne qui prend un tableau de notes et sa taille, et retourne la moyenne.
+
+-------------------------------------------------------------------
+
+
+
+
+
+#include <stdio.h>
+// Online C compiler to run C program online
+
+void AfficheTab(int t[3]){
+    for (int i=0;i<3;i++){
+        printf("%d ",t[i]);
+    }
+       
+       
+   } 
+int main() {
+   
+   int T1[3];
+    printf("remplir table: ");
+     for (int i=0;i<3;i++){
+          
+        
+    
+        scanf("%d\n",&T1[i]);
+    }
+    
+     AfficheTab(T1);
+   
+  
+    
+    
+
+    
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+// Online C compiler to run C program online
+
+float CalculeMoy(int T,int N[T]){
+    float Moy;
+    float s=0;
+    for (int i=0;i<T;i++){
+        
+        s=s+N[i];
+       
+    }
+    Moy=s/T;
+    return Moy;
+       
+       
+   } 
+int main() {
+   int T1;
+   int N1[4];
+    
+   do{
+       printf("donner la taille: ");
+        scanf("%d",&T1);
+       
+       
+       
+   }while(T1>4||T1<=0);
+    
+   
+    printf("entrer les valeurs");
+     for (int i=0;i<T1;i++){
+         
+          
+        
+    
+        scanf("%d",&N1[i]);
+    }
+    
+  float res=CalculeMoy(T1,N1);
+    printf(" moyenne des notes  est :%f",res);
+   
+  
+    
+    
+
+    
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mini projet #include <stdio.h>
+
+// Fonction pour afficher toutes les notes
+void afficherNotes(int notes[], int taille) {
+    printf("Les notes sont : ");
+    for (int i = 0; i < taille; i++) {
+        printf("%d ", notes[i]);
+    }
+    printf("\n");
+}
+
+float calculerMoyenne(int notes[], int taille) {
+    int somme = 0;
+    for (int i = 0; i < taille; i++) {
+        somme += notes[i];
+    }
+    return (float)somme / taille;
+}
+
+
+int trouverMax(int notes[], int taille) {
+    int max = notes[0];  // Initialiser le max avec la première note
+    for (int i = 1; i < taille; i++) {
+        if (notes[i] > max) {
+            max = notes[i];  // Si une note est plus grande, mettre à jour max
+        }
+    }
+    return max;
+}
+
+int main() {
+    int taille;
+
+    printf("Entrez le nombre de notes : ");
+    scanf("%d", &taille);
+
+  
+    if (taille <= 0) {
+        printf("Le nombre de notes doit être positif.\n");
+        return 1;
+    }
+
+  
+    int notes[taille];
+
+    
+    for (int i = 0; i < taille; i++) {
+        printf("Entrez la note %d : ", i + 1);
+        scanf("%d", &notes[i]);
+    }
+
+    afficherNotes(notes, taille);
+
+    float moyenne = calculerMoyenne(notes, taille);
+    printf("La moyenne des notes est : %.2f\n", moyenne);
+
+    int max = trouverMax(notes, taille);
+    printf("La note maximale est : %d\n", max);
+
+    return 0;
+}
+
