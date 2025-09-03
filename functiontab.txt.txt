@@ -9,16 +9,14 @@ int main() {
   printf("troisieme prenom est %s",tab[2]);
 
     return 0;
-}char prenoms[5][8] :
+}
 
-5 prénoms,
 
-chaque prénom peut contenir jusqu'à 7 caractères +/0
 
 somme simple:
 
 int main() {
-    // Write C code here
+    
   int tab[3]={10,20,11};
   int s=0;
   for(int i=0;i<=2;i++){
@@ -288,7 +286,7 @@ int main() {
 
 Mini projet #include <stdio.h>
 
-// Fonction pour afficher toutes les notes
+
 void afficherNotes(int notes[], int taille) {
     printf("Les notes sont : ");
     for (int i = 0; i < taille; i++) {
