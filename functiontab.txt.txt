@@ -307,10 +307,10 @@ float calculerMoyenne(int notes[], int taille) {
 
 
 int trouverMax(int notes[], int taille) {
-    int max = notes[0];  // Initialiser le max avec la première note
+    int max = notes[0];  
     for (int i = 1; i < taille; i++) {
         if (notes[i] > max) {
-            max = notes[i];  // Si une note est plus grande, mettre à jour max
+            max = notes[i]; 
         }
     }
     return max;
